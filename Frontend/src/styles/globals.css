@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --canvas-bg: #f8fafc;
+        --canvas-dot: #cbd5e1;
+        --canvas-dot-hover: #64748b;
+        --surface-primary: #f8fafc;
+        --surface-secondary: #ffffff;
+        --surface-subtle: #f1f5f9;
+        --surface-border: #e2e8f0;
+        --surface-border-subtle: #f1f5f9;
+        --content-primary: #0f172a;
+        --content-secondary: #64748b;
+        --content-muted: #94a3b8;
+    }
+
+    .dark {
+        --canvas-bg: #0b0f19;
+        --canvas-dot: #334155;
+        --canvas-dot-hover: #94a3b8;
+        --surface-primary: #0b0f19;
+        --surface-secondary: #0f172a;
+        --surface-subtle: #1e293b;
+        --surface-border: #334155;
+        --surface-border-subtle: #1e293b;
+        --content-primary: #f8fafc;
+        --content-secondary: #94a3b8;
+        --content-muted: #64748b;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body,
+    #root {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+        font-size: 13px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: var(--surface-primary);
+        color: var(--content-primary);
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    /* Scrollbar styling for panels */
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+        background: #334155;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+    }
+}
